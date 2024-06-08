@@ -1,10 +1,14 @@
+import { Container } from "./components/Container/container"
+import { HeaderTitle } from "./components/HeaderTitle/header-title"
 
 
 function App() {
 
   return (
     <>
-      <h1 className="text-evergreen-light">Hello World</h1>
+      <Container>
+        <HeaderTitle />
+      </Container>
     </>
   )
 }
