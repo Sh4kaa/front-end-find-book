@@ -1,15 +1,9 @@
-import { Container } from "./components/Container/container"
-import { HeaderTitle } from "./components/HeaderTitle/header-title"
 
+import { Home } from "./Pages/Home"
 
 function App() {
-
   return (
-    <>
-      <Container>
-        <HeaderTitle />
-      </Container>
-    </>
+    <Home />
   )
 }
 
