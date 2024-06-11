@@ -23,16 +23,26 @@ export const Home = () => {
     <>
       <Header />
       <Container>
-        <Title>O que você quer ler hoje</Title>
-        {genderBooks.map(gender => (
-          <Button
-            key={gender}
-            variant={selectedGender.includes(gender) ? 'light' : 'dark'}
-            onClick={() => handleSelect(gender)}
-          >
-            {gender}
-          </Button>
-        ))}
+        <Title>O que você quer ler hoje?</Title>
+        <div className='grid grid-cols-8 gap-8 my-6'>
+          {genderBooks.map(gender => (
+            <Button
+              key={gender}
+              variant={selectedGender.includes(gender) ? 'dark' : 'light'}
+              onClick={() => handleSelect(gender)}
+            >
+              {gender}
+            </Button>
+          ))}
+        </div>
+        <div className='py-7'>
+          <p className='text-evergreen font-semibold text-2xl'>Sobre o que você gostaria de receber uma recomendação de livro</p>
+          <input type="text"
+            placeholder='Eugostaria de ler...'
+            className='outline-none shadow-lg border border-gray-100 rounded-lg w-full p-3 mt-3'
+          />
+        </div>
+        <Title>Livros recomendados</Title>
       </Container>
     </>
   )
