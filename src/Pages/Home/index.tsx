@@ -25,7 +25,7 @@ export const Home = () => {
       <Header />
       <Container>
         <Title>O que você quer ler hoje?</Title>
-        <div className='grid grid-cols-8 gap-8 my-6'>
+        <div className='grid md:grid-cols-8 grid-cols-4 gap-4 my-6'>
           {genderBooks.map(gender => (
             <Button
               key={gender}
@@ -43,7 +43,7 @@ export const Home = () => {
             className='outline-none shadow-lg border border-gray-100 rounded-lg w-full p-3 mt-3'
           />
         </div>
-        <Title>Livros recomendados</Title>
+        <Title className='mb-5'>Livros recomendados</Title>
         <Card />
       </Container>
     </section>
