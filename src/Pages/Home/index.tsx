@@ -4,6 +4,7 @@ import { Container } from '../../components/Container/container'
 import { Title } from '../../components/Title/title'
 import Button from '../../components/Button/button'
 import { useCallback, useState } from 'react'
+import { Card } from '../../components/Card/card'
 
 const genderBooks = ['Ação', 'Drama', 'Ficção', 'Terror', 'Biografia', 'Aventura']
 
@@ -20,7 +21,7 @@ export const Home = () => {
   }, [selectedGender])
 
   return (
-    <>
+    <section className='mb-6'>
       <Header />
       <Container>
         <Title>O que você quer ler hoje?</Title>
@@ -43,8 +44,9 @@ export const Home = () => {
           />
         </div>
         <Title>Livros recomendados</Title>
+        <Card />
       </Container>
-    </>
+    </section>
   )
 }
 
