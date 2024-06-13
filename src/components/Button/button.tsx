@@ -6,7 +6,6 @@ type ButtonProps = React.ComponentProps<'button'> & {
 }
 
 const Button = ({ children, variant = 'dark', className, ...rest }: ButtonProps) => {
-
   return (
     <button
       className={twMerge('bg-evergreen-light px-3 py-3 shadow text-white font-medium rounded-lg mt-3',
